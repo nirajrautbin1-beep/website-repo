@@ -1,75 +1,87 @@
 {
+  "certifications": [
+    "Google Cybersecurity Professional Certificate",
+    "TryHackMe Junior Penetration Tester & Pre-Security Learning Paths",
+    "Linux Professional Institute (LPI) Linux Essentials Fundamentals",
+    "PortSwigger Web Security Academy Practitioner Labs",
+    "CompTIA Security+ / eJPT Candidate"
+  ],
   "updatedAt": "2026-09-14T06:11:17.130Z",
-  "tools": [
-    {
-      "zipUrl": "/uploads/tools/1789184096482-92dcfb6694e4.zip",
-      "photoUrl": "/uploads/tools/1789184098025-c5da0cc603c2.png",
-      "description": "Lightweight reconnaissance automation script to discover subdomains, probe open HTTP/HTTPS ports, and generate organized HTML target summary reports for penetration testing labs.",
-      "tag": "Recon Tool",
-      "title": "ReconScope - Target Enumerator"
-    },
-    {
-      "photoUrl": "/uploads/tools/1789183872326-f1ce1ca9594d.png",
-      "tag": "Reporting Tool",
-      "description": "Markdown and HTML reporting template for penetration testers to document vulnerabilities, reproduction steps, CVSS v3.1 scoring, evidence attachments, and remediation guidance.",
-      "zipUrl": "/uploads/tools/1789184096482-92dcfb6694e4.zip",
-      "title": "SecReport - PenTest Findings Generator"
-    }
-  ],
-  "name": "Niraj Raut Hacker",
-  "skills": [
-    {
-      "title": "Web Application Security",
-      "tag": "",
-      "description": "OWASP Top 10 vulnerabilities, authentication bypass, SQL injection, XSS, CSRF, IDOR, SSRF, and business logic testing in lab environments.",
-      "link": ""
-    },
-    {
-      "title": "Security & Pentesting Tools",
-      "link": "",
-      "tag": "",
-      "description": "Burp Suite, Nmap, Wireshark, Metasploit, Gobuster, SQLMap, Nikto, and John the Ripper for vulnerability scanning and enumeration."
-    },
-    {
-      "link": "",
-      "description": "Kali Linux administration, Bash automation scripting, network fundamentals (TCP/IP), log analysis, and system hardening.",
-      "title": "Linux & Systems Security",
-      "tag": ""
-    },
-    {
-      "description": "Subdomain enumeration, DNS auditing, passive and active reconnaissance, WHOIS analysis, and attack surface discovery.",
-      "tag": "",
-      "title": "Reconnaissance & OSINT",
-      "link": ""
-    }
-  ],
+  "contact": {
+    "email": "nirajrautbin1@gmail.com",
+    "linkedin": "https://linkedin.com/in/nirajrautbin",
+    "github": "https://github.com/nirajrautbin1-beep"
+  },
+  "terminal": {
+    "whoami": "niraj@kali:~# whoami && id",
+    "status": "available for cybersecurity internship / freelance / collaboration",
+    "focus": "web-security | pentesting | linux | ctf-challenges | tool-development | bug-bounty"
+  },
   "experience": [
     "Hands-on vulnerability assessments across OWASP Top 10 categories in controlled lab environments",
     "Network reconnaissance, active scanning, and service enumeration using Nmap and Wireshark",
     "Bug bounty research and responsible disclosure methodology across scoped targets",
     "Technical reporting: documenting vulnerabilities, proof-of-concepts, CVSS vectors, and mitigation steps"
   ],
-  "contact": {
-    "github": "https://github.com/nirajrautbin1-beep",
-    "linkedin": "https://linkedin.com/in/nirajrautbin",
-    "email": "nirajrautbin1@gmail.com"
-  },
   "hero": {
-    "eyebrow": "Ethical Hacker • Penetration Tester • Security Researcher",
-    "subtitle": "Web application security, network penetration testing, Linux administration, vulnerability assessment, and responsible security research focused professional."
+    "subtitle": "Web application security, network penetration testing, Linux administration, vulnerability assessment, and responsible security research focused professional.",
+    "eyebrow": "Ethical Hacker • Penetration Tester • Security Researcher"
   },
+  "tools": [
+    {
+      "description": "Lightweight reconnaissance automation script to discover subdomains, probe open HTTP/HTTPS ports, and generate organized HTML target summary reports for penetration testing labs.",
+      "tag": "Recon Tool",
+      "zipUrl": "/uploads/tools/1789184096482-92dcfb6694e4.zip",
+      "title": "ReconScope - Target Enumerator",
+      "photoUrl": "/uploads/tools/1789184098025-c5da0cc603c2.png"
+    },
+    {
+      "zipUrl": "/uploads/tools/1789184096482-92dcfb6694e4.zip",
+      "title": "SecReport - PenTest Findings Generator",
+      "photoUrl": "/uploads/tools/1789183872326-f1ce1ca9594d.png",
+      "description": "Markdown and HTML reporting template for penetration testers to document vulnerabilities, reproduction steps, CVSS v3.1 scoring, evidence attachments, and remediation guidance.",
+      "tag": "Reporting Tool"
+    }
+  ],
+  "skills": [
+    {
+      "description": "OWASP Top 10 vulnerabilities, authentication bypass, SQL injection, XSS, CSRF, IDOR, SSRF, and business logic testing in lab environments.",
+      "title": "Web Application Security",
+      "tag": "",
+      "link": ""
+    },
+    {
+      "tag": "",
+      "link": "",
+      "description": "Burp Suite, Nmap, Wireshark, Metasploit, Gobuster, SQLMap, Nikto, and John the Ripper for vulnerability scanning and enumeration.",
+      "title": "Security & Pentesting Tools"
+    },
+    {
+      "title": "Linux & Systems Security",
+      "tag": "",
+      "link": "",
+      "description": "Kali Linux administration, Bash automation scripting, network fundamentals (TCP/IP), log analysis, and system hardening."
+    },
+    {
+      "title": "Reconnaissance & OSINT",
+      "description": "Subdomain enumeration, DNS auditing, passive and active reconnaissance, WHOIS analysis, and attack surface discovery.",
+      "link": "",
+      "tag": ""
+    }
+  ],
+  "name": "Niraj Raut Hacker",
   "projects": [
     {
       "tag": "Web Pentest",
+      "title": "OWASP Top 10 Vulnerability Assessment Lab",
       "link": "https://github.com/nirajrautbin1-beep",
-      "description": "Comprehensive security audit against vulnerable web applications covering authentication flaws, SQL injections, broken access controls, and IDOR vulnerabilities with CVSS scoring and remediation reports.",
-      "title": "OWASP Top 10 Vulnerability Assessment Lab"
+      "description": "Comprehensive security audit against vulnerable web applications covering authentication flaws, SQL injections, broken access controls, and IDOR vulnerabilities with CVSS scoring and remediation reports."
     },
     {
-      "description": "Modular Bash and Python automation pipeline for multi-threaded subdomain discovery, DNS resolution, port scanning, and web screenshot aggregation for authorized penetration testing engagements.",
-      "tag": "Automation",
       "title": "Automated Recon & Subdomain Enumerator",
-      "link": "https://github.com/nirajrautbin1-beep"
+      "link": "https://github.com/nirajrautbin1-beep",
+      "description": "Modular Bash and Python automation pipeline for multi-threaded subdomain discovery, DNS resolution, port scanning, and web screenshot aggregation for authorized penetration testing engagements.",
+      "tag": "Automation"
     },
     {
       "link": "https://github.com/nirajrautbin1-beep",
@@ -78,42 +90,30 @@
       "title": "Linux Privilege Escalation Methodology & Labs"
     },
     {
-      "description": "PCAP inspection and forensic log analysis to detect port scans, unencrypted credential leakage, ARP spoofing, and malicious payload indicators across enterprise network captures.",
       "title": "Network Traffic Analysis & Forensics with Wireshark",
-      "link": "https://github.com/nirajrautbin1-beep",
-      "tag": "Forensics"
+      "description": "PCAP inspection and forensic log analysis to detect port scans, unencrypted credential leakage, ARP spoofing, and malicious payload indicators across enterprise network captures.",
+      "tag": "Forensics",
+      "link": "https://github.com/nirajrautbin1-beep"
     }
-  ],
-  "certifications": [
-    "Google Cybersecurity Professional Certificate",
-    "TryHackMe Junior Penetration Tester & Pre-Security Learning Paths",
-    "Linux Professional Institute (LPI) Linux Essentials Fundamentals",
-    "PortSwigger Web Security Academy Practitioner Labs",
-    "CompTIA Security+ / eJPT Candidate"
   ],
   "homeProjects": [
     {
+      "link": "",
       "title": "Vulnerability Assessment Lab",
-      "link": "",
-      "tag": "",
-      "description": "Configured isolated virtual lab with DVWA and intentionally vulnerable systems to conduct penetration tests and author remediation reports."
+      "description": "Configured isolated virtual lab with DVWA and intentionally vulnerable systems to conduct penetration tests and author remediation reports.",
+      "tag": ""
     },
     {
-      "link": "",
       "tag": "",
+      "title": "Network Recon & Enumeration Practice",
       "description": "Executed structured host discovery, service enumeration, and vulnerability auditing in an authorized testing environment.",
-      "title": "Network Recon & Enumeration Practice"
+      "link": ""
     },
     {
-      "description": "Documented problem-solving notes, privilege escalation techniques, and exploit methodologies for TryHackMe and Hack The Box rooms.",
       "tag": "",
       "link": "",
+      "description": "Documented problem-solving notes, privilege escalation techniques, and exploit methodologies for TryHackMe and Hack The Box rooms.",
       "title": "CTF Challenges & Methodology Writeups"
     }
-  ],
-  "terminal": {
-    "whoami": "niraj@kali:~# whoami && id",
-    "status": "available for cybersecurity internship / freelance / collaboration",
-    "focus": "web-security | pentesting | linux | ctf-challenges | tool-development | bug-bounty"
-  }
+  ]
 }

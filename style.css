@@ -269,6 +269,31 @@ footer {
   padding: 34px 0 52px;
 }
 
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.footer-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+.footer-nav .sep {
+  color: rgba(49, 255, 138, 0.3);
+}
+
 .logo {
   text-decoration: none;
 }

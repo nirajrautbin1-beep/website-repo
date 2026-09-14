@@ -143,8 +143,9 @@ function createToolBox(item) {
     const image = document.createElement('img');
     image.className = 'tool-image';
     image.src = item.photoUrl;
-    image.alt = `${item.title || 'Tool'} preview`;
+    image.alt = `${item.title || 'Security Tool'} screenshot - Niraj Raut Bin`;
     image.loading = 'lazy';
+    image.decoding = 'async';
     image.onerror = () => {
       image.style.display = 'none';
     };
