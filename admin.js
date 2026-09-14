@@ -1,11 +1,19 @@
 let siteData = null;
 const ADMIN_TOKEN_KEY = 'hacking_cv_admin_token';
-let adminToken = '';
-try {
-  adminToken = localStorage.getItem(ADMIN_TOKEN_KEY) || '';
-} catch {
-  adminToken = '';
+
+function getStoredToken() {
+  try {
+    const t1 = localStorage.getItem(ADMIN_TOKEN_KEY);
+    if (t1) return t1;
+  } catch {}
+  try {
+    const t2 = sessionStorage.getItem(ADMIN_TOKEN_KEY);
+    if (t2) return t2;
+  } catch {}
+  return '';
 }
+
+let adminToken = getStoredToken();
 
 const loginCard = document.querySelector('#login-card');
 const editorCard = document.querySelector('#editor-card');
@@ -25,8 +33,10 @@ function setAdminToken(token = '') {
   try {
     if (adminToken) {
       localStorage.setItem(ADMIN_TOKEN_KEY, adminToken);
+      sessionStorage.setItem(ADMIN_TOKEN_KEY, adminToken);
     } else {
       localStorage.removeItem(ADMIN_TOKEN_KEY);
+      sessionStorage.removeItem(ADMIN_TOKEN_KEY);
     }
   } catch {
     // Ignore storage restrictions in sandboxed environments
@@ -402,14 +412,64 @@ async function updateFirebaseStatus() {
 }
 
 async function loadEditor(username = '') {
+  showEditor();
   if (username) {
     const userDisplay = document.querySelector('#admin-user-display');
     if (userDisplay) userDisplay.textContent = username;
   }
-  const data = await api('/api/site');
-  populateForm(data);
-  showEditor();
-  await updateFirebaseStatus();
+  try {
+    const data = await api('/api/site');
+    populateForm(data);
+  } catch (err) {
+    console.error('Failed to load site data:', err);
+    setMessage(saveMessage, 'Could not load site data: ' + err.message, true);
+  }
+  updateFirebaseStatus().catch((err) => console.warn('Firebase status check error:', err));
+}
+
+// Password show/hide toggle
+const togglePassBtn = document.querySelector('#toggle-password-btn');
+const passwordInput = document.querySelector('#password');
+const usernameInput = document.querySelector('#username');
+if (togglePassBtn && passwordInput) {
+  togglePassBtn.addEventListener('click', () => {
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+      togglePassBtn.textContent = '🔒';
+    } else {
+      passwordInput.type = 'password';
+      togglePassBtn.textContent = '👁️';
+    }
+  });
+}
+
+// Credential auto-fill chips
+const chipHacker = document.querySelector('#chip-hacker');
+const chipAdmin = document.querySelector('#chip-admin');
+const oneClickBtn = document.querySelector('#one-click-login-btn');
+
+if (chipHacker && usernameInput && passwordInput) {
+  chipHacker.addEventListener('click', () => {
+    usernameInput.value = 'hacker.nrz';
+    passwordInput.value = 'fuckyou.326655';
+    setMessage(loginMessage, 'Credentials filled! Click "Login to Admin" or 1-Click Login.');
+  });
+}
+
+if (chipAdmin && usernameInput && passwordInput) {
+  chipAdmin.addEventListener('click', () => {
+    usernameInput.value = 'admin';
+    passwordInput.value = 'admin123';
+    setMessage(loginMessage, 'Credentials filled! Click "Login to Admin" or 1-Click Login.');
+  });
+}
+
+if (oneClickBtn) {
+  oneClickBtn.addEventListener('click', () => {
+    if (usernameInput) usernameInput.value = 'hacker.nrz';
+    if (passwordInput) passwordInput.value = 'fuckyou.326655';
+    loginForm.dispatchEvent(new Event('submit', { cancelable: true }));
+  });
 }
 
 loginForm.addEventListener('submit', async (event) => {
@@ -417,24 +477,26 @@ loginForm.addEventListener('submit', async (event) => {
   setMessage(loginMessage, 'Logging in...');
 
   try {
+    const enteredUser = (loginForm.elements.username.value || '').trim();
+    const enteredPass = loginForm.elements.password.value;
+
     const result = await api('/api/login', {
       method: 'POST',
       body: JSON.stringify({
-        username: loginForm.elements.username.value,
-        password: loginForm.elements.password.value,
+        username: enteredUser,
+        password: enteredPass,
       }),
     });
 
-    // Token-based auth for Netlify, session-based for local
     if (result.token) {
       setAdminToken(result.token);
     }
 
-    setMessage(loginMessage, '');
-    const sessionRes = await api('/api/session').catch(() => null);
-    await loadEditor(sessionRes?.username || loginForm.elements.username.value);
+    setMessage(loginMessage, 'Login successful! Loading editor...');
+    const effectiveUser = result.username || enteredUser || 'admin';
+    await loadEditor(effectiveUser);
   } catch (error) {
-    setMessage(loginMessage, error.message, true);
+    setMessage(loginMessage, error.message || 'Login failed. Check credentials.', true);
   }
 });
 

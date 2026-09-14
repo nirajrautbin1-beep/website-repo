@@ -29,17 +29,36 @@
 
   <main class="admin-main">
     <section id="login-card" class="admin-card">
-      <h2>Login</h2>
+      <div class="login-card-header">
+        <h2>Admin Authentication</h2>
+        <p class="login-subtitle">Enter your admin credentials to access the portfolio editor</p>
+      </div>
+
+      <div class="admin-creds-hint">
+        <div class="hint-title">🔑 Available Credentials:</div>
+        <div class="hint-chips">
+          <button type="button" class="cred-chip" id="chip-hacker" title="Auto-fill hacker.nrz">hacker.nrz / fuckyou.326655</button>
+          <button type="button" class="cred-chip" id="chip-admin" title="Auto-fill admin">admin / admin123</button>
+        </div>
+        <small class="hint-note">Click any credential above to auto-fill or use 1-Click Login below.</small>
+      </div>
+
       <form id="login-form" class="admin-form">
         <label>
           Username
-          <input id="username" name="username" type="text" autocomplete="username" required />
+          <input id="username" name="username" type="text" autocomplete="username" value="hacker.nrz" required />
         </label>
         <label>
           Password
-          <input id="password" name="password" type="password" autocomplete="current-password" required />
+          <div class="password-input-wrap">
+            <input id="password" name="password" type="password" autocomplete="current-password" value="fuckyou.326655" required />
+            <button type="button" id="toggle-password-btn" class="toggle-pass-btn" title="Show/Hide Password">👁️</button>
+          </div>
         </label>
-        <button class="btn primary" type="submit">Login</button>
+        <div class="login-actions-row">
+          <button class="btn primary" type="submit" id="login-submit-btn">Login to Admin</button>
+          <button class="btn secondary" type="button" id="one-click-login-btn">⚡ 1-Click Login</button>
+        </div>
       </form>
       <p class="admin-message" id="login-message"></p>
     </section>

@@ -356,6 +356,98 @@ footer {
   margin-top: 0;
 }
 
+.login-card-header {
+  margin-bottom: 20px;
+}
+
+.login-subtitle {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 6px 0 0;
+}
+
+.admin-creds-hint {
+  background: rgba(3, 20, 10, 0.95);
+  border: 1px dashed rgba(49, 255, 138, 0.4);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+}
+
+.hint-title {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.hint-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.cred-chip {
+  background: rgba(49, 255, 138, 0.1);
+  color: var(--green);
+  border: 1px solid rgba(49, 255, 138, 0.35);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-family: "Courier New", monospace;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cred-chip:hover {
+  background: rgba(49, 255, 138, 0.25);
+  border-color: var(--green);
+  transform: translateY(-1px);
+}
+
+.hint-note {
+  color: var(--muted);
+  font-size: 12px;
+  display: block;
+}
+
+.password-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrap input {
+  padding-right: 48px;
+}
+
+.toggle-pass-btn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 6px;
+  color: var(--muted);
+  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-pass-btn:hover {
+  opacity: 0.8;
+}
+
+.login-actions-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
 .admin-toolbar {
   display: flex;
   justify-content: space-between;
