@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="#010302"/>
+  <g opacity=".55">
+    <circle cx="700" cy="410" r="220" fill="#020806" stroke="#31ff8a" stroke-width="5"/>
+    <circle cx="620" cy="375" r="52" fill="#000" stroke="#31ff8a" stroke-width="4"/>
+    <circle cx="780" cy="375" r="52" fill="#000" stroke="#31ff8a" stroke-width="4"/>
+    <path d="M650 505 Q700 545 750 505" fill="none" stroke="#31ff8a" stroke-width="5" stroke-linecap="round"/>
+    <path d="M545 575 H855 L815 725 H585 Z" fill="#020806" stroke="#31ff8a" stroke-width="5"/>
+    <g stroke="#31ff8a" stroke-width="3" opacity=".7">
+      <path d="M620 585 V710 M660 585 V720 M700 585 V725 M740 585 V720 M780 585 V710"/>
+    </g>
+  </g>
+  <g font-family="Courier New, monospace" font-size="17" fill="#31ff8a" opacity=".28">
+    <text x="280" y="185">010101010101010101010101010101010101010101010101</text>
+    <text x="325" y="225">101010101010101010101010101010101010101010101010</text>
+    <text x="380" y="265">001100110011001100110011001100110011001100110011</text>
+    <text x="450" y="305">AUTHORIZED LAB ONLY // DEFENSIVE SECURITY</text>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="#010302"/>
+  <defs>
+    <linearGradient id="fade" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#31ff8a" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#31ff8a" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g font-family="Courier New, monospace" font-size="22" fill="url(#fade)">
+    <text x="40" y="55">010101001101  root  scan  patch  101010111000</text>
+    <text x="120" y="115">nmap -sV lab.local  // authorized only</text>
+    <text x="820" y="175">access::granted  logs::clean  report::ready</text>
+    <text x="90" y="250">00110101010101010101010101010101010101010</text>
+    <text x="660" y="320">payload blocked → fix recommended</text>
+    <text x="180" y="410">whoami: ethical_hacker</text>
+    <text x="760" y="500">OWASP_TOP_10 // learn // defend</text>
+    <text x="60" y="610">ssh 443 8080 dns tcp udp http cookie session</text>
+    <text x="520" y="730">CTF MODE ENABLED</text>
+    <text x="210" y="820">document findings → secure systems</text>
+  </g>
+</svg>

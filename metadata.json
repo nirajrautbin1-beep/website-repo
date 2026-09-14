@@ -1,0 +1,8 @@
+{
+  "name": "Hacking CV",
+  "description": "Ethical hacker and cybersecurity portfolio with admin panel, custom tools, projects, and roadmap.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

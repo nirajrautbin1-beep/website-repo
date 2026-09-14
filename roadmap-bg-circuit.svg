@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="#020403"/>
+  <g fill="none" stroke="#31ff8a" stroke-width="4" opacity=".34">
+    <path d="M0 160 H260 V90 H430 V210 H690"/>
+    <path d="M1400 230 H1110 V330 H920 V260 H700"/>
+    <path d="M0 520 H220 V620 H440 V555 H690"/>
+    <path d="M1400 620 H1190 V700 H910 V610 H760"/>
+    <path d="M290 0 V140 M430 210 V350 M1050 230 V80 M920 330 V460 M520 900 V710 M1120 900 V720"/>
+  </g>
+  <g fill="#31ff8a" opacity=".55">
+    <circle cx="260" cy="160" r="8"/><circle cx="430" cy="90" r="8"/><circle cx="690" cy="210" r="8"/>
+    <circle cx="1110" cy="230" r="8"/><circle cx="920" cy="330" r="8"/><circle cx="700" cy="260" r="8"/>
+    <circle cx="220" cy="520" r="8"/><circle cx="440" cy="620" r="8"/><circle cx="690" cy="555" r="8"/>
+    <circle cx="1190" cy="620" r="8"/><circle cx="910" cy="700" r="8"/><circle cx="760" cy="610" r="8"/>
+  </g>
+  <circle cx="700" cy="450" r="180" fill="#31ff8a" opacity=".07"/>
+</svg>

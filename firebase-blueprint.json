@@ -1,0 +1,86 @@
+{
+  "entities": {
+    "SiteData": {
+      "title": "SiteData",
+      "description": "Portfolio and CV data for Niraj Raut Bin including skills, projects, tools, certifications, and contact details",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Full name of the professional"
+        },
+        "hero": {
+          "type": "object",
+          "description": "Hero section content and subtitles"
+        },
+        "terminal": {
+          "type": "object",
+          "description": "Interactive terminal text lines"
+        },
+        "skills": {
+          "type": "array",
+          "description": "List of cybersecurity and technical skills"
+        },
+        "timeline": {
+          "type": "array",
+          "description": "Experience timeline events"
+        },
+        "projects": {
+          "type": "array",
+          "description": "Portfolio security projects and writeups"
+        },
+        "tools": {
+          "type": "array",
+          "description": "Custom pentesting and security tools with download links"
+        },
+        "certifications": {
+          "type": "array",
+          "description": "List of certifications and verified badges"
+        },
+        "experience": {
+          "type": "array",
+          "description": "Practical experience and research points"
+        },
+        "contact": {
+          "type": "object",
+          "description": "Contact info and verified profile links"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "ISO timestamp of the latest portfolio update"
+        }
+      },
+      "required": ["name"]
+    },
+    "AdminLog": {
+      "title": "AdminLog",
+      "description": "Audit log for changes made in the admin panel",
+      "type": "object",
+      "properties": {
+        "action": {
+          "type": "string",
+          "description": "Action performed (e.g., update_site, tool_upload)"
+        },
+        "timestamp": {
+          "type": "string",
+          "description": "Timestamp of action"
+        },
+        "summary": {
+          "type": "string",
+          "description": "Short description of the change"
+        }
+      },
+      "required": ["action", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/site/{siteId}": {
+      "schema": "SiteData",
+      "description": "Single site document storing active portfolio content"
+    },
+    "/admin_logs/{logId}": {
+      "schema": "AdminLog",
+      "description": "Audit trail logs for administrative changes"
+    }
+  }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | Niraj Raut Bin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grid-bg"></div>
+
+  <header class="hero project-hero">
+    <nav class="nav">
+      <a href="index.html" class="logo">root@admin:~$</a>
+      <div class="nav-links">
+        <a href="projects.html" class="nav-btn">Projects</a>
+        <a href="tools.html" class="nav-btn">My Tools</a>
+        <a href="roadmap.html" class="nav-btn">Roadmap</a>
+        <a href="index.html" class="nav-btn">Back Home</a>
+      </div>
+    </nav>
+
+    <section class="hero-content">
+      <p class="eyebrow">Secure Admin</p>
+      <h1>Admin <span>Panel</span></h1>
+      <p class="subtitle">Login garera website ko name, contact, skills, projects, certifications, ra experience edit garnu.</p>
+    </section>
+  </header>
+
+  <main class="admin-main">
+    <section id="login-card" class="admin-card">
+      <h2>Login</h2>
+      <form id="login-form" class="admin-form">
+        <label>
+          Username
+          <input id="username" name="username" type="text" autocomplete="username" required />
+        </label>
+        <label>
+          Password
+          <input id="password" name="password" type="password" autocomplete="current-password" required />
+        </label>
+        <button class="btn primary" type="submit">Login</button>
+      </form>
+      <p class="admin-message" id="login-message"></p>
+    </section>
+
+    <section id="editor-card" class="admin-card admin-editor hidden">
+      <div class="admin-toolbar">
+        <div>
+          <h2>Website Editor</h2>
+          <p>Logged in as: <strong id="admin-user-display">admin</strong> • Changes save garepachi public website ma refresh गर्दा dekhincha.</p>
+        </div>
+        <button class="btn secondary" id="logout-btn" type="button">Logout</button>
+      </div>
+
+      <div id="firebase-card" class="firebase-panel">
+        <div class="firebase-panel-header">
+          <div class="firebase-live-indicator">
+            <span class="pulse-dot"></span>
+            <strong>Firebase Firestore Database</strong>
+            <span id="fb-connection-badge" class="badge-connected">Checking...</span>
+          </div>
+          <button class="btn secondary btn-sm" id="fb-sync-btn" type="button">Force Sync to Firebase</button>
+        </div>
+        <div class="firebase-panel-details">
+          <span class="fb-detail-item">Project: <code id="fb-project-id">robust-pipe-mf38q</code></span>
+          <span class="fb-detail-item">Database: <code id="fb-db-id">ai-studio-hackingcvwebsite-...</code></span>
+          <span class="fb-detail-item">Doc: <code>/site/portfolio</code></span>
+          <span class="fb-detail-item" id="fb-last-sync">Storage: Cloud Firestore Active</span>
+        </div>
+        <p class="fb-sync-msg" id="fb-sync-msg"></p>
+      </div>
+
+      <form id="site-form" class="admin-form">
+        <fieldset>
+          <legend>Main Profile</legend>
+          <label>Name <input name="name" type="text" required /></label>
+          <label>Hero line <input name="heroEyebrow" type="text" /></label>
+          <label>Hero subtitle <textarea name="heroSubtitle" rows="3"></textarea></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Terminal Text</legend>
+          <label>Whoami <input name="terminalWhoami" type="text" /></label>
+          <label>Focus <input name="terminalFocus" type="text" /></label>
+          <label>Status <input name="terminalStatus" type="text" /></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Contact</legend>
+          <label>Email <input name="email" type="email" /></label>
+          <label>GitHub <input name="github" type="text" /></label>
+          <label>LinkedIn <input name="linkedin" type="text" /></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Skills</legend>
+          <div id="skills-editor" class="repeat-list"></div>
+          <button class="btn secondary" type="button" data-add="skills">Add Skill</button>
+        </fieldset>
+
+        <fieldset>
+          <legend>Home Projects</legend>
+          <div id="home-projects-editor" class="repeat-list"></div>
+          <button class="btn secondary" type="button" data-add="homeProjects">Add Home Project</button>
+        </fieldset>
+
+        <fieldset>
+          <legend>Project Page</legend>
+          <div id="projects-editor" class="repeat-list"></div>
+          <button class="btn secondary" type="button" data-add="projects">Add Project</button>
+        </fieldset>
+
+        <fieldset>
+          <legend>My Tools</legend>
+          <p class="admin-help">Tool name/description lekhera photo ra ZIP upload garnu. Upload pachi Save Changes click garnu.</p>
+          <div id="tools-editor" class="repeat-list"></div>
+          <button class="btn secondary" type="button" data-add="tools">Add Tool</button>
+        </fieldset>
+
+        <fieldset>
+          <legend>Certifications & Experience</legend>
+          <label>Certifications <textarea name="certifications" rows="5" placeholder="One item per line"></textarea></label>
+          <label>Experience <textarea name="experience" rows="5" placeholder="One item per line"></textarea></label>
+        </fieldset>
+
+        <div class="admin-actions">
+          <button class="btn primary" type="submit">Save Changes</button>
+          <a class="btn secondary" href="index.html">View Website</a>
+        </div>
+      </form>
+      <p class="admin-message" id="save-message"></p>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

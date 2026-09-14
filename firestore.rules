@@ -1,0 +1,30 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default-deny catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128;
+    }
+
+    function isValidSite(data) {
+      return data.name is string && data.name.size() > 0 && data.name.size() <= 100;
+    }
+
+    match /site/{siteId} {
+      allow read: if isValidId(siteId);
+      allow create, update: if isValidId(siteId) && isValidSite(request.resource.data);
+      allow delete: if request.auth != null;
+    }
+
+    match /admin_logs/{logId} {
+      allow read: if true;
+      allow create: if isValidId(logId) && request.resource.data.action is string;
+      allow update, delete: if false;
+    }
+  }
+}

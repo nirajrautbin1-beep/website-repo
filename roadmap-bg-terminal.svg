@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="#000"/>
+  <rect x="170" y="115" width="1060" height="670" rx="28" fill="#031008" stroke="#31ff8a" stroke-width="4" opacity=".72"/>
+  <rect x="170" y="115" width="1060" height="70" rx="28" fill="#092014" opacity=".95"/>
+  <circle cx="220" cy="150" r="12" fill="#31ff8a"/><circle cx="260" cy="150" r="12" fill="#00c96f"/><circle cx="300" cy="150" r="12" fill="#94b8a5"/>
+  <g font-family="Courier New, monospace" font-size="28" fill="#31ff8a" opacity=".58">
+    <text x="230" y="250">root@roadmap:~$ start ethical-hacking</text>
+    <text x="230" y="315">[01] learn linux .............. OK</text>
+    <text x="230" y="370">[02] learn networking ......... OK</text>
+    <text x="230" y="425">[03] learn web security ....... OK</text>
+    <text x="230" y="480">[04] practice CTF labs ........ OK</text>
+    <text x="230" y="535">[05] write clean reports ...... OK</text>
+    <text x="230" y="615">permission_scope=required</text>
+    <text x="230" y="675">status: ACCESS_GRANTED</text>
+  </g>
+</svg>

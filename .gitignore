@@ -1,0 +1,13 @@
+# Environment variables (sensitive data)
+.env
+.env.local
+
+# Node modules
+node_modules/
+
+# Local development
+.claude/
+
+# System files
+.DS_Store
+Thumbs.db
